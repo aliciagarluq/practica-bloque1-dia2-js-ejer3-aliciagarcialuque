@@ -77,9 +77,33 @@ for(let i=1;i<li_list.length;i++){
   let d_child1=document.createElement("div")
   //texto del div
   let t_child1=document.createTextNode("color: "+ colorList[i - 1].colorName);
-
   d_child1.appendChild(t_child1);
+  d_child1.classList.add("color-name");
   li_list[i].append(d_child1);
+
+  //creamos el div 2
+  let d_child2=document.createElement("div")
+  //texto del div
+  let t_child2=document.createTextNode("Muestra");
+  d_child2.appendChild(t_child2);
+  d_child2.classList.add("color-show")
+  li_list[i].append(d_child2);
+
+  //creamos el button 1
+  let b_child3=document.createElement("button")
+  //texto del button
+  let t_child3=document.createTextNode("Next item color");
+  b_child3.appendChild(t_child3);
+  b_child3.classList.add("color-set")
+  li_list[i].append(b_child3);
+
+  //creamos el button 2
+  let b_child4=document.createElement("button")
+  //texto del button
+  let t_child4=document.createTextNode("Next item color");
+  b_child4.appendChild(t_child4);
+  b_child4.classList.add("color-set")
+  li_list[i].append(b_child4);
 }
 console.log(li_list)
 
