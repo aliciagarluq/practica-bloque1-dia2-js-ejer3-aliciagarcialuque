@@ -71,6 +71,16 @@ for(let i=0;i<colorList.length;i++){
 //lista de li
 let li_list=document.querySelectorAll("li");
 
+for(let i=1;i<li_list.length;i++){
+  if(i%2==0){
+    li_list.classList.add("color-item--odd");
+    
+  }else{
+   li_list.classList.add("color-item");
+  }
+  console.log(li_list[i]);
+}
+
 //el contenido a cada li 
 for(let i=1;i<li_list.length;i++){
   //creamos el div 1 
@@ -110,13 +120,7 @@ for(let i=1;i<li_list.length;i++){
   li_list[i].append(b_child4);
 
 }
-for(let i;i<li_list.length;i++){
-  if(i%2==0){
-    li_list[i].classList.add("color-item--odd");
-  }else{
-    li_list[i].classList.add("color-item");
-  }
-}
 
-console.log(li_list)
+
+console.log(li_list.classList)
 
