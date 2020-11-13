@@ -72,19 +72,14 @@ for(let i=0;i<colorList.length;i++){
 let li_list=document.querySelectorAll("li");
 
 //el contenido a cada li 
-/*for(let i=1;i<li_list.length;i++){
+for(let i=1;i<li_list.length;i++){
   //creamos el div 1 
   let d_child1=document.createElement("div")
   //texto del div
   let t_child1=document.createTextNode("color: "+ colorList[i - 1].colorName);
 
   d_child1.appendChild(t_child1);
-
-  d_child1.classList.add("color-name");
-
-  listParent[i].appendChild(d_child1);
-
-
-
-}*/
+  li_list[i].append(d_child1);
+}
+console.log(li_list)
 
