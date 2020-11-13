@@ -74,7 +74,7 @@ let li_list=document.querySelectorAll("li");
 //el contenido a cada li 
 for(let i=1;i<li_list.length;i++){
   //creamos el div 1 
-  let d_child1=document.createElement("div")
+  let d_child1=document.createElement("div");
   //texto del div
   let t_child1=document.createTextNode("color: "+ colorList[i - 1].colorName);
   d_child1.appendChild(t_child1);
@@ -108,9 +108,15 @@ for(let i=1;i<li_list.length;i++){
   li_list[i].append(d_child2);
   li_list[i].append(b_child3);
   li_list[i].append(b_child4);
-  
-  
-  
+
 }
+for(let i;i<li_list.length;i++){
+  if(i%2==0){
+    li_list[i].classList.add("color-item--odd");
+  }else{
+    li_list[i].classList.add("color-item");
+  }
+}
+
 console.log(li_list)
 
