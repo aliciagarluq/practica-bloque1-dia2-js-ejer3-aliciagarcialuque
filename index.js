@@ -25,7 +25,6 @@
 //    * Al hacer click sobre el botón con el texto "Page color" deberá aplicarse el color de ese item al color de fondo de la página (elemento body).
 
 // Buena suerte!
-
 const colorList = [
   {
     colorName: 'white',
@@ -60,3 +59,32 @@ const colorList = [
     hex: '#c0c0c0'
   }
 ];
+//ul
+const listParent = document.querySelector("ul");
+
+//guardamos los li dentro del padre
+for(let i=0;i<colorList.length;i++){
+  let li=document.createElement("li");
+  listParent.appendChild(li);
+}
+
+//lista de li
+let li_list=document.querySelectorAll("li");
+
+//el contenido a cada li 
+/*for(let i=1;i<li_list.length;i++){
+  //creamos el div 1 
+  let d_child1=document.createElement("div")
+  //texto del div
+  let t_child1=document.createTextNode("color: "+ colorList[i - 1].colorName);
+
+  d_child1.appendChild(t_child1);
+
+  d_child1.classList.add("color-name");
+
+  listParent[i].appendChild(d_child1);
+
+
+
+}*/
+
